@@ -33,12 +33,12 @@
 
 </style>
 
-<body>
+<body ontouchend="vm.changeHeader()">
 
   <div class="ui grid stackable">
     <div id="HEADER" class="column">
       <h2 class="ui block inverted centered header" style="border:0;">
-        Header
+        {{currentHeader}}
       </h2>
     </div>
   </div>
@@ -46,10 +46,25 @@
 
 
 
-
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: ".header",
+      data: {
+        headers: ['Me', 'Skills', 'Projects', 'Contact'],
+        i: 0,
+        currentHeader: 'Me'
+      },
+      methods: {
+        changeHeader() {
+          this.currentHeader = this.headers[++this.i % 4];
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>
