@@ -11,15 +11,15 @@
   <title>Document</title>
   <style type="text/css">
     body {
-      background: #5F4B66;
+      background: #666;
       color: white;
       font-family: 'Montserrat' !important;
-      overscroll-behavior: contain;
     }
 
     #HEADER {
       padding-right: 0 !important;
       padding-left: 0 !important;
+      width: 103.7vw;
     }
 
     .header {
@@ -27,6 +27,13 @@
       /* font-weight: 300; */
       /* text-transform: uppercase; */
     }
+
+    /* #side1,
+    #side2,
+    #side3 {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available !important;
+    } */
   </style>
 </head>
 
@@ -34,13 +41,45 @@
 
 </style>
 
-<body ontouchend="vm.changeHeader()">
+<body>
 
-  <div class="ui grid stackable">
-    <div id="HEADER" class="column">
-      <h2 class="ui block inverted centered header" style="border:0;">
-        {{currentHeader}}
-      </h2>
+  <div class="ui grid">
+    <div class="row" style="padding-bottom:0;">
+      <div class="sixteen wide column">
+        <div id="HEADER">
+          <h2 class="ui block inverted centered header" style="border:0;">
+            Me
+          </h2>
+        </div>
+        <div class="ui shape" tabindex="0">
+          <div class="sides">
+            <div id="side1" class="active side">
+              <div class="ui very padded segment" style="margin: 0;width:103.7vw;background: #00b5ad;">
+                <p style="color:transparent;">shfhsjhgsajhndvdjvdnvdvk</p>
+                <h2 style="height:-webkit-fill-available;">Raghav Kaushik</h2>
+              </div>
+            </div>
+            <div id="side2" class=" side">
+              <div class="ui very padded segment" style="margin: 0;width:103.7vw;background: yellow;">
+                <p style="color:transparent;">shfhsjhgsajhndvdjvdnvdvk</p>
+                <h2 style="height:-webkit-fill-available;">Another 1</h2>
+              </div>
+            </div>
+            <div id="side3" class="side">
+              <div class="ui very padded segment" style="margin: 0;width:103.7vw;background: violet;">
+                <p style="color:transparent;">shfhsjhgsajhndvdjvdnvdvk</p>
+                <h2 style="height:-webkit-fill-available;">Another 1</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui two bottom attached buttons" tabindex="0">
+          <div class="ui black button" id="left-btn">
+            <i class="arrow left icon"></i></div>
+          <div class="ui black button" id="right-btn">
+            <i class="arrow right icon"></i></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -52,18 +91,9 @@
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
   <script>
-    var vm = new Vue({
-      el: ".header",
-      data: {
-        headers: ['Me', 'Skills', 'Projects', 'Contact'],
-        i: 0,
-        currentHeader: 'Me'
-      },
-      methods: {
-        changeHeader() {
-          this.currentHeader = this.headers[++this.i % 4];
-        }
-      }
+    $(document).ready(() => {
+      $("#right-btn").click(() => $('.shape').shape('flip right'))
+      $("#left-btn").click(() => $('.shape').shape('flip left'))
     })
   </script>
 </body>
