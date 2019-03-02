@@ -28,6 +28,11 @@
 
 =========================================================*/
 
+@font-face{
+  font-family: "consolaz";
+  src: url('./consolaz.ttf') format('truetype');
+}
+
 /*=======================================================
 	General Styles
 =======================================================*/
@@ -558,7 +563,7 @@ body.section-switching.up .animation-block{
 }
 .info-list > li > span{
 	color:#286090;
-  font-family: "monospace";
+  font-family: "consolaz";
 }
 .services-block .section-header{
 	margin-bottom:80px;
