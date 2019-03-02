@@ -558,7 +558,7 @@ body.section-switching.up .animation-block{
 }
 .info-list > li > span{
 	color:#286090;
-  font-family: "Consolas";
+  font-family: "monospace";
 }
 .services-block .section-header{
 	margin-bottom:80px;
