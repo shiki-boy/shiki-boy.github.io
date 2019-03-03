@@ -734,7 +734,8 @@ body.section-switching.up .animation-block{
 }
 .p-table > .items > li{
 	padding:10px 0;
-	color:rgba(0,0,0,.4);
+	color:#286090;
+  font-family: "consolaz";
 }
 .p-table > .header{
 	margin-bottom:35px;
