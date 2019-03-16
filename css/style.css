@@ -1400,7 +1400,7 @@ body.loaded #preloader .loader{
 		margin-bottom:10px;
 	}
 	.intro-text > h1{
-		font-size:62px;
+		font-size:57px;
 	}
 }
 @media(max-width:550px){
@@ -1419,5 +1419,17 @@ body.loaded #preloader .loader{
 	.section-block{
 		padding:40px;
 		padding-top:0;
+	}
+}
+@media(max-width:376px){
+	.section{
+		padding-top:40px;
+	}
+	.section-block{
+		padding:40px;
+		padding-top:0;
+	}
+  .intro-text > h1{
+		font-size:50px;
 	}
 }
