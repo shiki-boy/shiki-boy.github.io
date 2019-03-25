@@ -603,7 +603,7 @@ body.section-switching.up .animation-block{
 	left:0;
 	right:0;
 	bottom:0;
-	border:solid 1px rgba(0,0,0,.1);
+	/* border:solid 1px rgba(0,0,0,.1); */
 	z-index:2;
 }
 .service > .icon{
@@ -697,7 +697,7 @@ body.section-switching.up .animation-block{
 	right:0;
 	bottom:0;
 	z-index:2;
-	border:solid 1px rgba(0,0,0,.1);
+	/* border:solid 1px rgba(0,0,0,.1); */
 }
 .p-table:after{
 	content: ' ';
@@ -1360,6 +1360,8 @@ body.loaded #preloader .loader{
 	.p-table,
 	.service{
 		margin-bottom:25px;
+    box-shadow: 0px 3px 6px 2px #50494921;
+    border-radius: 13px;
 	}
 	.skills-block .skill{
 		margin-bottom:40px;
