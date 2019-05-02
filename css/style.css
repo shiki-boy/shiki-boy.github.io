@@ -1113,7 +1113,7 @@ body.section-switching.up .animation-block{
 }
 .popup-box{
 	background:#FFF;
-	max-width:450px;
+	max-width:35%;
 	margin:0 auto;
 	position:relative;
 	-webkit-box-shadow: 0 0 0 4px #FFF;
@@ -1141,9 +1141,10 @@ body.section-switching.up .animation-block{
 	font-weight:bold;
 	font-size:20px;
 }
-.popup-box > .content > p{
+.popup-box > .content > ul > li{
 	font-size:14px;
-	color:rgba(0,0,0,.45);
+	color:#286090;
+  font-family: "consolaz";
 	font-weight:500;
 }
 
